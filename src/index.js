@@ -1,7 +1,7 @@
 // second option two connect database
 import dotenv from 'dotenv'
 import connectDB from './db/index.js'
-import app from './app.js'
+
 
 // fist option to connect database
 // import mongoose from 'mongoose'
@@ -15,7 +15,7 @@ dotenv.config({
 connectDB()
 .then(()=>{
     app.listen(process.env.PORT || 8000,()=>{
-        console.log(` server is running at port: ${porcess.env.PORT}`)
+        console.log(` server is running at port: ${process.env.PORT}`)
     })
     app.on("error",(error)=>{
             console.log("ERROR::",error);
